@@ -1,0 +1,69 @@
+Shadow Hub — guide d'utilisation (français)
+============================================
+
+Installation sur iPhone
+-----------------------
+1. Ouvrez le site dans Safari.
+2. Appuyez sur le bouton Partager (carré avec flèche vers le haut).
+3. Choisissez « Sur l'écran d'accueil », puis Ajouter.
+4. Lancez « Shadow Hub » depuis l'écran d'accueil (mode autonome).
+
+Sur Android (Chrome) : menu ⋮ → « Installer l'application » ou
+« Ajouter à l'écran d'accueil ».
+
+Déverrouillage (geste caché)
+----------------------------
+Au lancement, l'écran affiche une surface neutre (horloge sobre).
+Ce n'est PAS l'écran de code.
+
+Pour révéler l'écran de code :
+  → Double-tapez rapidement près du HAUT de l'écran
+    (bandeau supérieur, environ les 15 % du haut).
+
+Puis saisissez le code : 6767
+Un code erroné affiche « Incorrect passcode » et l'app reste verrouillée.
+
+Code d'accès
+------------
+Code actuel : 6767
+
+Pour le changer, éditez dans app.js la constante clairement marquée :
+  // ===== PASSCODE (change here) =====
+  const PASSCODE = "6767";
+
+Verrouillage
+------------
+Dans l'app, le bouton rouge « Lock » renvoie à la surface leurre
+(horloge). Le geste caché est à nouveau nécessaire.
+
+Fonctionnement
+--------------
+Après déverrouillage, une liste « Shadow Hub » présente les outils de
+confidentialité. Chaque ligne a un titre et une légende ; les lignes qui
+ont une URL sont des liens cliquables qui s'ouvrent dans le MÊME onglet :
+  • Network Guard — firewall + DNS + kill
+      https://memecoinsphere.github.io/netguard/
+  • Sensor Vault — permissions policy
+      https://memecoinsphere.github.io/sensorvault/
+  • Profile Isolator — multi-profil local
+      https://memecoinsphere.github.io/profiles/
+  • Location Mask — checklist + fake coords log
+      https://memecoinsphere.github.io/location-mask/
+  • Tracker Audit — IDFA / IDFV / install ID
+      https://memecoinsphere.github.io/tracker-audit/
+Le bouton « Lock » renvoie à la surface leurre.
+
+LIMITES IMPORTANTES (à lire)
+----------------------------
+Shadow Hub est une simple page de liens LOCALE : elle ne collecte ni
+n'envoie aucune donnée. Les liens pointent vers d'autres apps web ; leur
+disponibilité dépend de leur déploiement. Rien n'est stocké ici.
+
+Tout est LOCAL : les données sont mémorisées uniquement dans le
+navigateur (localStorage) de cet appareil. Aucun appel réseau, aucune
+analytique. Effacer les données du site efface tout. Ce guide n'est pas
+lié depuis l'application.
+
+Fichiers
+--------
+Tout est statique (HTML/CSS/JS), sans étape de build ni CDN externe.
